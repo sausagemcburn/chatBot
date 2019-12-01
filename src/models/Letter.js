@@ -7,7 +7,7 @@ class Letter {
     }
     
     changeColor() {
-        this.rgb_color = color(random(25,255),random(25,255),random(25,255))
+        this.rgb_color = generateRandomColor();
         return;
     }
     
