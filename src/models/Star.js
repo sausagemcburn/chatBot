@@ -78,6 +78,7 @@ class Star {
 
     stroke(this.c);
     line(px, py, sx, sy);
+    noStroke();
 
   }
 }
