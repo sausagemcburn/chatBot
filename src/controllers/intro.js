@@ -60,7 +60,7 @@ let char_sp = 77;
 let change_P = 0.09;
 
     
-    
+
     
 // def getCurrentFadeColor(i, n, c0, c):
 //     ''' Gets the current fade color based on fade iteration and colors '''
@@ -202,20 +202,23 @@ function drawWaves(offset) {
 
 
 function preload() {
-    myFont = loadFont('../src/resources/cqmono.otf');
+    myFont = loadFont("../src/resources/cqmono.otf");
+
 }
 
 
 
 
 function setup() {
+
     createCanvas(sizeX, sizeY);
     noStroke(); 
 
     // let timer = new Timer(timer_time);
-
-    textFont(myFont);
-    textSize(160);
+    
+    textFont(myFont, 160);
+    // textSize(160);
+    //textStyle(BOLD);
 
     title = new Title('sausagemcburn', char_sp, x_txt0, y_txt0, change_P);  
 }

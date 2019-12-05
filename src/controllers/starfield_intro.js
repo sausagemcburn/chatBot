@@ -12,7 +12,7 @@ let speed = 5;
 
 // Text overlay info + offsets
 let name_txt = "";
-let x_txt0 = 0;
+let x_txt0 = (-sizeX / 4) - 33;
 let y_txt0 = 54;
 // let saus_offset = 115;
 let intro_offset = 18;
@@ -28,13 +28,11 @@ let change_P = 0.09;
 // it will be filled with x elements made with the Star() class.
 
 let stars = [];
-for (let i = 0; i < num_stars; i++) {
-  stars.push(new Star());
-}
+
 
 
 function preload() {
-  //myFont = loadFont('../src/resources/cqmono.otf');
+  myFont = loadFont('../src/resources/cqmono.otf');
 }
 
 
@@ -45,10 +43,16 @@ function setup() {
   // for (let i = 0; i < stars.length; i++) {
   //   stars[i] = new Star();
   // }
-  textFont(myFont);
-  textSize(font_size);
+  textFont(myFont, font_size);
 
-  let title = new Title('sausagemcburn', char_sp, x_txt0, y_txt0, change_P);
+  noStroke();
+
+  for (let i = 0; i < num_stars; i++) {
+    stars.push(new Star());
+  }
+  
+
+  title = new Title('sausagemcburn', char_sp, x_txt0, y_txt0, change_P);
   
 }
 
@@ -64,7 +68,7 @@ function draw() {
     stars[i].show();
   }
  
- // Draw text
- 
+  // Draw text
+  title.drawSelf();
 
 }

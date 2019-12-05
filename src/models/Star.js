@@ -8,8 +8,10 @@ class Star {
   
   constructor() {
     // I place values in the variables
+    //this.x = map(Math.random(), 1, -width/2, width/2);
     this.x = random(-width/2, width/2);
     // note: height and width are the same: the canvas is a square.
+    //this.y = map(Math.random(), 1, -height/2, height/2);
     this.y = random(-height/2, height/2);
     // note: the z value can't exceed the width/2 (and height/2) value,
     // beacuse I'll use "z" as divisor of the "x" and "y",
@@ -17,7 +19,7 @@ class Star {
     this.z = random(width/2);
     // I set the previous position of "z" in the same position of "z",
     // which it's like to say that the stars are not moving during the first frame.
-    this.pz = z;
+    this.pz = this.z;
     
     // color_r = random(255);
     // color_g = random(255);
@@ -43,7 +45,7 @@ class Star {
       this.z = width/2;
       this.x = random(-width/2, width/2);
       this.y = random(-height/2, height/2);
-      this.pz = z;
+      this.pz = this.z;
     }
   }
 
